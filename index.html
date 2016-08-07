@@ -67,7 +67,7 @@
         }
 
         //ZIEMIA
-        var geoEarth = new THREE.PlaneGeometry(600, 200);
+        var geoEarth = new THREE.PlaneGeometry(100, 50);
         var matEarth = new THREE.MeshBasicMaterial({color: 0xcccccc});
         var mshEarth = new THREE.Mesh(geoEarth, matEarth);
         mshEarth.rotation.x = -0.5 * Math.PI;
@@ -80,7 +80,7 @@
         sceMain.add(mshEarth);
 
         //STOK
-        var geoSlope = new THREE.CylinderGeometry( 20, 20, 30, 52 );
+        var geoSlope = new THREE.CylinderGeometry( 5, 5, 20, 9 );
 		var matSlope;
         if (bulDebug) {
             matSlope = new THREE.MeshBasicMaterial( { color: 0xff0000, wireframe: true } );
@@ -131,7 +131,7 @@
             matTree = new THREE.MeshBasicMaterial( { color: 0xaaaaaa } );
         }
         var mshTree = new THREE.Mesh(boxTree, matTree);
-        mshTree.position.y = 25;
+        mshTree.position.y = 10;
         mshTree.position.z = -5;
         if (!bulDebug) {
             mshTree.castShadow = true;
